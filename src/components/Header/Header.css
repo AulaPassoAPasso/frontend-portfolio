@@ -17,6 +17,10 @@ a {
     color: black;
 }
 
+a:hover {
+    color: rgb(188, 0, 213);
+}
+
 nav ul {
     display: flex;
     gap: 16px;

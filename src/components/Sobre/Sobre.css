@@ -1,7 +1,7 @@
 #sobreMim {
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     padding-inline: 50px;
     height: 100vh;
     gap: 50px;
@@ -11,8 +11,8 @@
 #resumo {
     display: flex; 
     flex-direction: column;
+    max-width: 900px;
     gap: 20px;
-    padding-inline: 16px;
 }
 
 #resumo h2 {
@@ -28,10 +28,6 @@
     font-size: 3.5rem;
     color: rgb(188, 0, 213);
 }
-#meus-conhecimentos {
-    width: 100%;
-    margin-left: 16px;
-}
 
 #meus-conhecimentos ul {
     list-style: none;
@@ -42,7 +38,7 @@
 
     #sobreMim {
         flex-direction: column;
-        padding-inline: 10px;
+        align-items: start;
     }
 
     #sobreMim div:nth-child(1) h2 {
@@ -53,12 +49,10 @@
         font-size: 1.2rem;
     }
     
-
     #meus-conhecimentos h2 {
         font-size: 1.8rem;
     }
     #meus-conhecimentos ul{
         font-size: 1.2rem;
     }
-
 }
