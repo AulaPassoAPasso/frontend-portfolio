@@ -12,6 +12,9 @@ export const Contato = ({categoria}) => {
 
     try {
       alert("Mensagem enviada com sucesso!");
+      setNome("");
+      setEmail("");
+      setMensagem("");
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
     }
