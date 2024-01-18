@@ -10,8 +10,23 @@ export const Contato = ({categoria}) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const data = {
+      nome,
+      email,
+      mensagem
+    };
+
     try {
-      alert("Mensagem enviada com sucesso!");
+      await fetch("http://localhost:3000", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data)
+      })
+      .then(res => res.json())
+      .then(res => alert(res))
+
       setNome("");
       setEmail("");
       setMensagem("");
