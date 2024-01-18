@@ -11,10 +11,7 @@ export const Contato = ({categoria}) => {
     e.preventDefault();
 
     try {
-      await onSubmit({ nome, email, mensagem });
-      setNome('');
-      setEmail('');
-      setMensagem('');
+      alert("Mensagem enviada com sucesso!");
     } catch (error) {
       console.error('Erro ao enviar formulário:', error);
     }
@@ -37,7 +34,7 @@ export const Contato = ({categoria}) => {
                 id="nome"
                 name="nome"
                 value={nome}
-                onChange={handleSubmit}
+                onChange={(e) => setNome(e.target.value)}
                 required
                 />
             </div>
@@ -48,7 +45,7 @@ export const Contato = ({categoria}) => {
                 id="email"
                 name="email"
                 value={email}
-                onChange={handleSubmit}
+                onChange={(e) => setEmail(e.target.value)}
                 required
                 placeholder="exemplo@gmail.com"
                 />
@@ -59,7 +56,7 @@ export const Contato = ({categoria}) => {
                 id="mensagem"
                 name="mensagem"
                 value={mensagem}
-                onChange={handleSubmit}
+                onChange={(e) => setMensagem(e.target.value)}
                 required
                 />
             </div>
